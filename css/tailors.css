@@ -37,8 +37,7 @@
   width: 300px;
   display: flex;
   background-color: #fff;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
+  border-radius: 5px;
   box-shadow: 0 0 2px rgb(204, 204, 204);
   transition: all 0.5s ease;
   position: relative;
@@ -128,6 +127,7 @@
 
 .button-degree .btn {
   width: 100%;
+  border-radius: 2px;
 }
 
 .filter-result-section {
@@ -151,4 +151,46 @@
 table tr th {
   border-top: 0px !important;
   border-bottom: 0px !important;
+}
+
+.dataTables_filter label input {
+  width: 200px;
+  height: 35px;
+  border: 1px solid #dee2e6;
+  outline: none;
+  border-radius: 3px;
+  padding: 0px 10px;
+}
+
+.dataTables_length label,
+.dataTables_filter label,
+.dataTables_info,
+.dataTables_paginate {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+table tr th {
+  border-top: 0px !important;
+  border-bottom: 0px !important;
+  font-size: 0.8rem;
+}
+
+table tr td {
+  font-size: 0.7rem;
+  border-bottom: 0px !important;
+}
+
+@media (min-width: 767px) {
+  .filter-section .dropdown,
+  .filter-section .dropdown-submit {
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  .table-section {
+    overflow-x: scroll;
+    width: 98%;
+  }
 }
