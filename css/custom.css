@@ -11,7 +11,7 @@ header .colorlib-navbar-brand .colorlib-logo {
 }
 
 header .colorlib-navbar-brand .colorlib-logo img {
-  width: 120px;
+  width: 100px;
 }
 
 header .colorlib-navbar-brand .colorlib-logo:hover {
@@ -24,24 +24,8 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   text-decoration: none;
 }
 
-.cases-container {
-  padding: 2rem 1rem;
-}
-
-.cases-row {
-  align-items: center;
-}
-
-.case-img {
-  width: 100%;
-}
-
-.case-img img {
-  width: 100%;
-}
-
-.ftco-animated .case-img {
-  background-color: #edeef3;
+.d-header h1 {
+  margin-bottom: 1.5rem;
 }
 
 .button-degree .btn {
@@ -87,65 +71,6 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   background-color: #fff;
 }
 
-.flaticon-gym-1::before {
-  content: "";
-  display: inline-flex;
-  width: 40px;
-  height: 40px;
-  background-image: url("../images/shopping-cart.svg");
-  background-position: center center;
-  background-size: cover;
-}
-
-.flaticon-gym-2::before {
-  content: "";
-  background-image: url("../images/home.svg");
-}
-
-.flaticon-gym-3::before {
-  content: "";
-  background-image: url("../images/sew.svg");
-}
-
-.flaticon-gym-4::before {
-  content: "";
-  background-image: url("../images/sponsor.svg");
-}
-
-.services .icon span:after {
-  position: absolute;
-  content: "";
-  background: #94021fc9;
-}
-
-.ftco-section {
-  padding: 2em 0;
-}
-
-.ftco-section .container .sponsors-logos {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.pb-5 {
-  padding-bottom: 0 !important;
-}
-.mb-5 {
-  margin-bottom: 1rem !important;
-}
-.spons-row {
-  margin-bottom: 3rem !important;
-}
-.spons-section {
-  padding: 3rem 0 !important;
-}
-.footer-logo {
-  width: 200px;
-  display: flex;
-}
-
 .ftco-section {
   padding: 2em 0;
 }
@@ -162,13 +87,18 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100% center;
-  height: 150px;
+  height: 105px;
   position: relative;
 }
 
-.ftco-footer .ftco-footer-widget .email a {
-  color: #fff;
+.ftco-footer {
+  background: #fff !important;
   font-size: 18px;
+}
+
+.ftco-footer p, .ftco-footer .ftco-footer-widget .email a {
+  color: #94021f;
+  font-size: 14px;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -187,7 +117,7 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
     padding: 2em 0;
   }
   header .colorlib-navbar-brand .colorlib-logo img {
-    width: 200px;
+    width: 140px;
   }
 
   header .colorlib-navbar-brand .colorlib-logo {
