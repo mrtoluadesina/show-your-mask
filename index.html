@@ -134,24 +134,30 @@
       <!-- Filter -->
 
       <div class="ftco-section filter-section">
-        <div class="dropdown">
-          <div class="select">
-            <span>Select State</span>
-            <i class="fa fa-chevron-left"></i>
+        <div class="selector">
+          <label>State</label>
+          <div class="dropdown">
+            <div class="select">
+              <span>Please choose one</span>
+              <i class="fa fa-chevron-left"></i>
+            </div>
+            <input type="hidden" name="state" id="selected-state" />
+            <ul class="dropdown-menu state-dropdown"></ul>
           </div>
-          <input type="hidden" name="state" id="selected-state" />
-          <ul class="dropdown-menu state-dropdown"></ul>
         </div>
-        <div class="dropdown">
-          <div class="select">
-            <span>Select LGA</span>
-            <i class="fa fa-chevron-left"></i>
+        <div class="selector">
+          <label>Local Govt Area</label>
+          <div class="dropdown">
+            <div class="select">
+              <span>Please choose one</span>
+              <i class="fa fa-chevron-left"></i>
+            </div>
+            <input type="hidden" name="lga" id="selected-lga" />
+            <ul class="dropdown-menu lga-dropdown"></ul>
           </div>
-          <input type="hidden" name="lga" id="selected-lga" />
-          <ul class="dropdown-menu lga-dropdown"></ul>
         </div>
         <div class="button-degree button-degree-dark-bg dropdown-submit">
-          <span class="btn px-4 py-3">Submit</span>
+          <span class="btn px-4 py-3">Show mask provider</span>
         </div>
       </div>
       <!-- Filter -->
@@ -181,7 +187,7 @@
                   <th>Company Name</th>
                   <th>LGA</th>
                   <th>State</th>
-                  <th>Capacity</th>
+                  <th>Mask per day</th>
                 </tr>
               </thead>
               <tbody></tbody>
