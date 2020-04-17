@@ -104,10 +104,14 @@ $(document).ready(async () => {
   $('.dropdown-submit').click(function() {
     const stateValue = $('#selected-state').val();
     const lgaValue = $('#selected-lga').val();
+    const resultNote = document.querySelector('#result-note');
     const resultTable = document.querySelector('#result-table tbody');
-
+    
     let stateReg = new RegExp(stateValue, 'i');
     let lgaReg = new RegExp(lgaValue, 'i');
+    
+    resultNote.innerText = `Displaying result(s) for ${lgaValue} Local government area(s) in ${stateValue} state.`
+    console.log(resultNote)
 
     const data = JSON.parse(localStorage.getItem('tn'));
 
@@ -118,6 +122,9 @@ $(document).ready(async () => {
       const newresult = data.filter(item => {
         return item.state.match(stateReg);
       });
+
+      resultNote.innerText = 'Displaying results'
+      console.log(resultNote)
 
       resultTable.classList.add('show-table');
       resultTable.innerHTML = ``;
