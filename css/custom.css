@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  color: #94021f;
+}
+
 header .colorlib-navbar-brand .colorlib-logo {
   padding: 4px;
   display: block;
