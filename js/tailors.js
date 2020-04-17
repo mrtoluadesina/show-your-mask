@@ -8,8 +8,8 @@ $(document).ready(async () => {
     type: 'GET',
     url: BASE_URI,
     cache: true,
-    dataType: "json",
-    success: function ({ feed }) {
+    dataType: 'json',
+    success: function({ feed }) {
       const tailors = feed.entry;
       let data = tailors.map(({ content }) => {
         const payload = [];
@@ -93,6 +93,7 @@ $(document).ready(async () => {
 
     lgas = [...new Set(lgas)].sort();
     lgaDropDown.innerHTML = '';
+    lgaDropDown.innerHTML += "<li class='dropdown-item'>All</li>";
     for (let l of lgas) {
       lgaDropDown.innerHTML += `<li class="dropdown-item" id="${l}">${l}</li>`;
     }
@@ -103,15 +104,40 @@ $(document).ready(async () => {
   $('.dropdown-submit').click(function() {
     const stateValue = $('#selected-state').val();
     const lgaValue = $('#selected-lga').val();
+    const resultTable = document.querySelector('#result-table tbody');
 
     let stateReg = new RegExp(stateValue, 'i');
     let lgaReg = new RegExp(lgaValue, 'i');
 
     const data = JSON.parse(localStorage.getItem('tn'));
+
+    if (lgaValue == 'All') {
+      $('.filter-result-section').css('display', 'none');
+      $('.table-section').css('display', 'block');
+
+      const newresult = data.filter(item => {
+        return item.state.match(stateReg);
+      });
+
+      resultTable.classList.add('show-table');
+      resultTable.innerHTML = ``;
+      newresult.forEach(item => {
+        resultTable.innerHTML += `<tr>
+        <td>${item.firstname}</td>
+        <td>${item.lastname}</td>
+        <td>${item.phonenumber}</td>
+        <td>${item.emailaddress}</td>
+        <td>${item.companyname}</td>
+        <td>${item.lga}</td>
+        <td>${item.state}</td>
+        <td>${item.capacity}</td>
+        </tr>`;
+      });
+    }
+
     const result = data.filter(item => {
       return item.state.match(stateReg) && item.lga.match(lgaReg);
     });
-    const resultTable = document.querySelector('#result-table tbody');
 
     if (!result.length) {
       $('.filter-result-section').css('display', 'block');
