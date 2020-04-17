@@ -11,7 +11,7 @@ header .colorlib-navbar-brand .colorlib-logo {
 }
 
 header .colorlib-navbar-brand .colorlib-logo img {
-  width: 120px;
+  width: 100px;
 }
 
 header .colorlib-navbar-brand .colorlib-logo:hover {
@@ -162,7 +162,7 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100% center;
-  height: 150px;
+  height: 125px;
   position: relative;
 }
 
@@ -187,7 +187,7 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
     padding: 2em 0;
   }
   header .colorlib-navbar-brand .colorlib-logo img {
-    width: 200px;
+    width: 140px;
   }
 
   header .colorlib-navbar-brand .colorlib-logo {
