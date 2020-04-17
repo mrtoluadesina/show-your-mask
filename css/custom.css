@@ -161,7 +161,7 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
 .home.small-slider .slider-item {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: 100% center;
   height: 300px;
   position: relative;
 }
@@ -175,6 +175,9 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
 }
 
 @media (min-width: 767px) {
+  .home.small-slider .slider-item {
+    background-position: center center;
+  }
   .ftco-section {
     padding: 2em 0;
   }
