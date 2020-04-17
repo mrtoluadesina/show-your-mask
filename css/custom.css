@@ -1,0 +1,241 @@
+html {
+  scroll-behavior: smooth;
+}
+
+header .colorlib-navbar-brand .colorlib-logo {
+  padding: 4px;
+  display: block;
+  text-align: center;
+  border: 1px solid #fff;
+  position: relative;
+}
+
+header .colorlib-navbar-brand .colorlib-logo img {
+  width: 120px;
+}
+
+header .colorlib-navbar-brand .colorlib-logo:hover {
+  text-decoration: none !important;
+}
+
+header .colorlib-navbar-brand .colorlib-logo:active,
+header .colorlib-navbar-brand .colorlib-logo:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+.cases-container {
+  padding: 2rem 1rem;
+}
+
+.cases-row {
+  align-items: center;
+}
+
+.case-img {
+  width: 100%;
+}
+
+.case-img img {
+  width: 100%;
+}
+
+.ftco-animated .case-img {
+  background-color: #edeef3;
+}
+
+.button-degree .btn {
+  position: relative;
+  background: #94021f;
+  border: transparent;
+  color: #fff;
+  width: 200px;
+  height: 50px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-degree .btn:after {
+  content: "";
+  position: inherit;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  overflow: visible;
+  width: 0px;
+  height: 0px;
+  z-index: 0;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  background-color: #fff;
+  -webkit-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+}
+
+.button-degree .btn:hover:after {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  background-color: #fff;
+}
+
+.flaticon-gym-1::before {
+  content: "";
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background-image: url("../images/shopping-cart.svg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.flaticon-gym-2::before {
+  content: "";
+  background-image: url("../images/home.svg");
+}
+
+.flaticon-gym-3::before {
+  content: "";
+  background-image: url("../images/sew.svg");
+}
+
+.flaticon-gym-4::before {
+  content: "";
+  background-image: url("../images/sponsor.svg");
+}
+
+.services .icon span:after {
+  position: absolute;
+  content: "";
+  background: #94021fc9;
+}
+
+.ftco-section {
+  padding: 2em 0;
+}
+
+.ftco-section .container .sponsors-logos {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.pb-5 {
+  padding-bottom: 0 !important;
+}
+.mb-5 {
+  margin-bottom: 1rem !important;
+}
+.spons-row {
+  margin-bottom: 3rem !important;
+}
+.spons-section {
+  padding: 3rem 0 !important;
+}
+.footer-logo {
+  width: 200px;
+  display: flex;
+}
+
+.ftco-section {
+  padding: 2em 0;
+}
+
+.footer-logo img {
+  width: 100%;
+}
+
+.ftco-section .container .sponsors-logos img {
+  width: 50px;
+}
+
+.home.small-slider .slider-item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 300px;
+  position: relative;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .button-degree .btn:after {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+}
+
+@media (min-width: 767px) {
+  .ftco-section {
+    padding: 2em 0;
+  }
+  header .colorlib-navbar-brand .colorlib-logo img {
+    width: 200px;
+  }
+
+  header .colorlib-navbar-brand .colorlib-logo {
+    padding: 7px;
+  }
+
+  .ftco-section .container .sponsors-logos img {
+    width: 150px;
+  }
+  .spons-section {
+    padding: 7rem 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .cases-row .case-for-mask {
+    order: -1;
+  }
+}
+
+@media (max-width: 1025px) {
+  .custom-desktop-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .colorlib-nav-toggle {
+    display: none;
+  }
+
+  .custom-desktop-menu {
+    display: flex;
+    height: 100%;
+  }
+
+  .custom-desktop-menu ul {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .custom-desktop-menu ul li {
+    list-style: none;
+  }
+
+  .custom-desktop-menu ul li a {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 3px 0px;
+  }
+
+  .custom-desktop-menu ul li a:hover {
+    transition: ease all 0.2s;
+    border-bottom: 3px #35e78e solid;
+  }
+}
