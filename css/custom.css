@@ -6,6 +6,15 @@ a {
   color: #94021f;
 }
 
+ul { 
+  list-style: none;
+  margin: 0
+}
+
+header {
+  padding: 1rem 0;
+}
+
 header .colorlib-navbar-brand .colorlib-logo {
   padding: 4px;
   display: block;
@@ -91,7 +100,7 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100% center;
-  height: 105px;
+  height: 70px;
   position: relative;
 }
 
