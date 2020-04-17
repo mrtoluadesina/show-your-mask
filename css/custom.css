@@ -166,6 +166,11 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   position: relative;
 }
 
+.ftco-footer .ftco-footer-widget .email a {
+  color: #fff;
+  font-size: 18px;
+}
+
 @media screen and (prefers-reduced-motion: reduce) {
   .button-degree .btn:after {
     -webkit-transition: none;
