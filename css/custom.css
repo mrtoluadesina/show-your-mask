@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
-a {
+a, .ftco-footer a {
   color: #94021f;
 }
 
