@@ -16,13 +16,30 @@ $(document).ready(async () => {
         const { $t } = content;
         const singleData = $t.split(",");
 
+        const validateFields = [
+          "firstname",
+          "lastname",
+          "phonenumber",
+          "emailaddress",
+          "companyname",
+          "lga",
+          "state",
+          "capacity",
+        ];
+
         let objOutput = {};
         for (let i = 0, length = singleData.length; i < length; i++) {
           let keyValue = singleData[i].split(":");
+
           objOutput[keyValue[0].trim().replace(/-/g, "")] = keyValue[1]
             ? keyValue[1].trim()
             : null;
         }
+
+        validateFields.forEach((field) => {
+          if (!(field in objOutput)) objOutput[field] = "Nill";
+        });
+
         payload.push(objOutput);
 
         return payload[0];
@@ -92,17 +109,16 @@ $(document).ready(async () => {
 
   /*End Dropdown Menu*/
 
-  $('.dropdown-submit').click(function() {
-    const stateValue = $('#selected-state').val();
-    const lgaValue = $('#selected-lga').val();
-    const resultNote = document.querySelector('#result-note');
-    const resultTable = document.querySelector('#result-table tbody');
-    
-    let stateReg = new RegExp(stateValue, 'i');
-    let lgaReg = new RegExp(lgaValue, 'i');
-    
-    resultNote.innerText = `Displaying result(s) for ${lgaValue} Local government area(s) in ${stateValue} state.`
-    console.log(resultNote)
+  $(".dropdown-submit").click(function () {
+    const stateValue = $("#selected-state").val();
+    const lgaValue = $("#selected-lga").val();
+    const resultNote = document.querySelector("#result-note");
+    const resultTable = document.querySelector("#result-table tbody");
+
+    let stateReg = new RegExp(stateValue, "i");
+    let lgaReg = new RegExp(lgaValue, "i");
+
+    resultNote.innerText = `Displaying result(s) for ${lgaValue} Local government area(s) in ${stateValue} state.`;
 
     const data = JSON.parse(localStorage.getItem("tn"));
 
@@ -112,7 +128,7 @@ $(document).ready(async () => {
 
       const newresult = data.filter((item) => item.state.match(stateReg));
 
-      resultTable.classList.add('show-table');
+      resultTable.classList.add("show-table");
       resultTable.classList.add("show-table");
       resultTable.innerHTML = ``;
 
